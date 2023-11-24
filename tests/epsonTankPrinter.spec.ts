@@ -5,6 +5,7 @@ import { StoreName } from '../string/storename';
 import { StoreURL } from '../used-urls/store_urls';
 import { ChromeConfig } from '../string/browser-config';
 import { discountPrice } from '../functions/discount-function';
+import { fillInEmailMessage } from '../functions/emailMessage'
 const { chromium } = require('playwright');
 
 const orginalPrice = 199.99
@@ -25,10 +26,6 @@ test.describe('Epson EcoTank Printer',() => {
     test.beforeAll(async ({}) => {
         emailTextToSend = ''
     })
-    async function fillInEmailMessage(storeName: String, itemPrice: String, urlLink: String): Promise<string>{
-        let emailMessage = `STORE NAME: ${storeName}\n` + `PRICE: ${itemPrice}\n` + `WEBSITE: ${urlLink}\n\n\n`
-        return emailMessage
-    }
 
     test(`Get price of ${deviceName} in ${StoreName.TargetStore}`, async ({}) => {
         const browser = await chromium.launch();
