@@ -1,0 +1,18 @@
+export enum StoreURL{
+    BestBuyGloworge = 'https://www.bestbuy.com/site/glowforge-aura-laser-3d-printer-white/6563065.p?skuId=6563065',
+    BestBuyGlowforgeFilter = 'https://www.bestbuy.com/site/glowforge-aura-personal-air-filter/6563187.p?skuId=6563187',
+    AmazonGlowforge = 'https://www.amazon.com/Glowforge-Aura-Craft-Laser-Cutter/dp/B0CBQRCVJX/ref=sr_1_5?crid=3SJDVS2PGFHP7&keywords=glowforge+aura&qid=1700077116&sprefix=blowforge+aura%2Caps%2C1214&sr=8-5',
+    GlowforgeItem = 'https://shop.glowforge.com/collections/printers/products/glowforge-aura?_gl=1*1pdbqfh*_up*MQ..&gclid=CjwKCAiA9dGqBhAqEiwAmRpTC7TddrdXDV4y72lJUf8EzIkEaWEmUUimFaRRlOmGJiPlWgQqagWFJBoCcngQAvD_BwE',
+    GlowForgeFilterItem = 'https://shop.glowforge.com/products/glowforge-personal-filter',
+    MichalesGlowforge = 'https://www.michaels.com/product/glowforge-aura-craft-laser-cutting-machine-10729306',
+    MichalesGlowforgeFilter = 'https://www.michaels.com/product/glowforge-aura-personal-air-filter-10729307?michaelsStore=5077&inv=1',
+    JoannGlowforge = 'https://www.joann.com/glowforge-aura-22in-pro-craft-laser-printer/19749886.html',
+    JoannGlowforgeFilter = 'https://www.joann.com/glowforge-aura-22in-personal-filter/19749894.html',
+    BestBuyNetgear = 'https://www.bestbuy.com/site/netgear-nighthawk-m6-5g-wifi-6-hotspot-black-unlocked/6530931.p?skuId=6530931',
+    AmazonNetgear = 'https://www.amazon.com/NETGEAR-Nighthawk-Mobile-Hotspot-MR6150/dp/B0BGV79FHT/ref=sr_1_3?crid=3J8VIKIGDQZZG&keywords=NETGEAR%2B-%2BNighthawk%2BM6%2B5G%2BWiFi%2B6%2BHotspot%2B-%2BBlack%2B(Unlocked)&qid=1700286004&sprefix=netgear%2B-%2Bnighthawk%2Bm6%2B5g%2Bwifi%2B6%2Bhotspot%2B-%2Bblack%2Bunlocked%2B%2Caps%2C134&sr=8-3&th=1',
+    NetgearWebpage = 'https://www.netgear.com/home/mobile-wifi/hotspots/mr6150/',
+    WalmartEpsonEcoTank = 'https://www.walmart.com/ip/Epson-EcoTank-ET-2803-Wireless-All-in-One-Cartridge-Free-Printer/514027934?athbdg=L1600&from=/search',
+    TargetEpsonEcoTank = 'https://www.target.com/p/ecotank-et-2803-inkjet-printer-copier-scanner-white/-/A-82735179#lnk=sametab',
+    BestBuyEpsonEcoTank = 'https://www.bestbuy.com/site/epson-ecotank-et-2800-wireless-all-in-one-supertank-inkjet-printer-white/6469371.p?skuId=6469371',
+    StaplesEpsonEcoTank = 'https://www.staples.com/epson-ecotank-et-2800-wireless-color-all-in-one-inkjet-printer-c11cj66202/product_24498330',
+}
