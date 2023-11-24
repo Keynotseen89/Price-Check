@@ -20,9 +20,8 @@ let deviceName = 'Netgear Nighthawk M6 5G'
 
 test.describe('Netgear Nighthawk M6 5G',() => {
 
-
     let emailTextToSend: String = ``
-
+    
     test.beforeAll(async ({}) => {
         emailTextToSend = ''
     })
@@ -37,7 +36,6 @@ test.describe('Netgear Nighthawk M6 5G',() => {
         const netgearName = await netgearPage.locator("div[id^=shop-product-title] div[class=sku-title]").first().innerText();
         const netgearPrice = await netgearPage.locator("[data-testid^=customer-price]").first().locator("span[aria-hidden]").innerText()
 
-
         let itemCurrentPrice = netgearPrice.toString().replace('$','').replace(',','');
         
         if( itemCurrentPrice <= itemTenPercentDiscount || itemCurrentPrice <= itemTwentyPercentDiscount || itemCurrentPrice <= itemThirtyPercentDiscount)
@@ -47,7 +45,6 @@ test.describe('Netgear Nighthawk M6 5G',() => {
         }
 
         await asyncWriteFile('../records-file/netgear-item.txt', '\n' + netgearName.toString().trim() + ', ' + StoreName.BestBuyStore + ', ' + netgearPrice.replace(',','').trim() + ', ' + dateTime )
-        
         await browser.close();  
     })
 
@@ -69,8 +66,7 @@ test.describe('Netgear Nighthawk M6 5G',() => {
             emailTextToSend = emailTextToSend.concat(emailTextMessage.toString())
         }
         
-        await asyncWriteFile('../records-file/netgear-item.txt', '\n' + netgearName.substring(0, netgearName.lastIndexOf('Router,'))  + ', ' + StoreName.AmazonStore + ', ' + netgearPrice.replace(',','').trim() + ', ' + dateTime )
-        
+        await asyncWriteFile('../records-file/netgear-item.txt', '\n' + netgearName.substring(0, netgearName.lastIndexOf('Router,'))  + ', ' + StoreName.AmazonStore + ', ' + netgearPrice.replace(',','').trim() + ', ' + dateTime ) 
         await browser.close();  
     })
 
@@ -84,25 +80,15 @@ test.describe('Netgear Nighthawk M6 5G',() => {
         const netgearName = await netgearWebPage.locator("div[id=overview] div.title-block h1.h3").first().innerText()
         const netgearPrice = await netgearWebPage.locator("div[id=price-value-div] p.new-price").first().innerText()
 
-
         let itemCurrentPrice = netgearPrice.toString().replace('$','').replace(',','');
-
-        
-        console.log("THIS ONE HERE -> : " + netgearName.toString().substring(0, netgearName.lastIndexOf('Router,')).trim())
-        console.log("THIS PRICE -> " + itemCurrentPrice )
-        
+                
         if( itemCurrentPrice <= itemTenPercentDiscount || itemCurrentPrice <= itemTwentyPercentDiscount || itemCurrentPrice <= itemThirtyPercentDiscount)
         {
-            console.log(itemCurrentPrice)
-            console.log(itemTenPercentDiscount)
-            console.log(itemTwentyPercentDiscount)
-            console.log(itemThirtyPercentDiscount)
             let emailTextMessage = await fillInEmailMessage(StoreName.NetgearStore, itemCurrentPrice.toString().trim(), StoreURL.NetgearWebpage)
             emailTextToSend = emailTextToSend.concat(emailTextMessage.toString())
         }
 
         await asyncWriteFile('../records-file/netgear-item.txt', '\n' + netgearName.substring(0, netgearName.lastIndexOf('Router,')).trim()  + ', ' + StoreName.NetgearStore + ', ' + netgearPrice.replace(',','').trim() + ', ' + dateTime )
-        
         await browser.close();  
     })
 
